@@ -117,7 +117,7 @@ static boolean checkmask_on_face(dl_matrix3du_t *image_matrix, box_array_t *boxe
     }
     td = updateQueue(0, 1);
     Serial.print(td);
-    mask = mask && (td < diffmax)&& (td > diffmin);
+    mask = (td < diffmax)&& (td > diffmin);
     Serial.println(mask ? " >mask on" : " >mask off");
   }
   return mask;
